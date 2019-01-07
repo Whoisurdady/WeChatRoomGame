@@ -5,23 +5,13 @@ from itchat.content import *
 
 import game_chengyu
 import json
-# import threading
 
-# @itchat.msg_register(TEXT, isGroupChat=True)
-# def text_reply(msg):
-#     # if msg.isAt:
-#     msg.user.send(u'@%s\u2005I received: %s' % (
-#         msg.actualNickName, msg.text))
 
-# itchat.auto_login(hotReload=True)
-# itchat.run()
-# itchat.send('Hello, filehelper', toUserName='filehelper')
-# itchat.send('Hello, World!', toUserName=u'还是叫赵剑吧')
 
 import requests
 import itchat
 
-KEY = '78f1cf06d3904a28be1955bfbfccfe1d'
+KEY = '******' # regitster your own KEY here, web site http://www.tuling123.com/member/robot/index.jhtml
 
 game_dict = {}
 
