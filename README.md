@@ -19,6 +19,10 @@ pip 安装 itChat
 
 pip 安装 request
 
+需要去图灵机器人官网申请一个KEY，替换tuling_replay.py中的KEY
+
+http://www.tuling123.com/member/robot/index.jhtml
+
 其他的话，看提示缺啥就安装啥吧，没什么特殊丶库,pip都可以搞定
 ## 成语接龙
 
