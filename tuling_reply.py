@@ -49,7 +49,7 @@ def tuling_reply_group_at(msg):
         msg.user.send(u'@%s %s' % (
             msg.actualNickName, reply or defaultReply))
 
-    game_reply = game_chengyu.game_run(msg['Text'].decode("utf-8"), msg.actualNickName or get_friend_name(msg))
+    game_reply = game_chengyu.game_run(msg['Text'], msg.actualNickName or get_friend_name(msg))
     if game_reply:
         msg.user.send(game_reply)
 
@@ -59,14 +59,14 @@ def tuling_reply_group_at(msg):
 
 def get_friend_name(msg):
     from_uid = msg["FromUserName"]
-    return itchat.search_friends(userName=from_uid)['NickName'].decode('utf-8')
+    return itchat.search_friends(userName=from_uid)['NickName']
 
 
 @itchat.msg_register(itchat.content.TEXT)
 def tuling_reply_chat(msg):
     # msg_dict = json.load(msg)
     # print(msg.userInfo)
-    game_reply = game_chengyu.game_run(msg['Text'].decode("utf-8"), get_friend_name(msg))
+    game_reply = game_chengyu.game_run(msg['Text'], get_friend_name(msg))
     if game_reply:
         return game_reply
     # 为了保证在图灵Key出现问题的时候仍旧可以回复，这里设置一个默认回复
